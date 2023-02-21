@@ -22,16 +22,17 @@ def check_fibonacci(data: Sequence[int]) -> bool:
         true_fib_range.append(new_el) #if the received element has passed the check above, then we add it to our sequence
 
         i += 1 #and add one to the variable i (index)
-     index_for_true_list = len(true_fib_range) - length_data #to cover cases in which the Fibonacci sequence does not start with 0 and 1
+    index_for_true_list = len(true_fib_range) - length_data #to cover cases in which the Fibonacci sequence does not start with 0 and 1
 
-        if index_for_true_list < 0:
-            return False
+    if index_for_true_list < 0:
+     return False
 
-        final_list = [] #created an empty array
-        for i in range(index_for_true_list, len(true_fib_range)):
-            final_list.append(true_fib_range[i])
+     final_list = [] #created an empty array
+     for i in range(index_for_true_list, len(true_fib_range)):
+        final_list.append(true_fib_range[i])
 
         return final_list == data #checking our array with this array by condition
+
 
 
 
