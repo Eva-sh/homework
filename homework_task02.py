@@ -35,5 +35,5 @@ def check_fibonacci(data: Sequence[int]) -> bool:
     for i in range(index_for_true_list, len(true_fib_range)):
         final_list.append(true_fib_range[i])
 
-        return final_list == data  # checking our array with this array by condition
+    return final_list == data  # checking our array with this array by condition
 
