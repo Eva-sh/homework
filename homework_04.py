@@ -5,15 +5,15 @@ from collections.abc import Callable
 def cache(func: Callable) -> Callable:
     cache = {}
 
-    def a(*args, **kwargs):
+    def wrapper(*args, **kwargs):
         if not cache.get(args):
-            g = func(*args, **kwargs)
-            cache[args] = g
-            return g
+            func_result = func(*args, **kwargs)
+            cache[args] = func_result
+            return func_result
         else:
             return cache[args]
 
-    return a
+    return wrapper
 
 
 def cache_lru(func: Callable) -> Callable:

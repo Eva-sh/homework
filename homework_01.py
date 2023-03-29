@@ -29,7 +29,7 @@ def count_punctuation_chars(file_path: str) -> int:
 
 
 def count_non_ascii_chars(file_path: str) -> int:
-    with open('TASK\data.txt', mode='r') as file:
+    with open(file_path, mode='r') as file:
         text = file.read().encode('utf-8').decode('unicode-escape')
         c = 0
         for i in text:
@@ -39,7 +39,7 @@ def count_non_ascii_chars(file_path: str) -> int:
 
 
 def get_most_common_non_ascii_char(file_path: str) -> str:
-    with open('TASK\data.txt', mode='r') as file:
+    with open(file_path, mode='r') as file:
         text = file.read().encode('utf-8').decode('unicode-escape')
         ascii_simbols = ''
         for i in text:
