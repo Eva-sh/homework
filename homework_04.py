@@ -11,7 +11,7 @@ def fizzbuzz(n: int) -> List[str]:
         elif i % 5 == 0:
             list.append('buzz')
         else:
-            list.append(i)
+            list.append(str(i))
 
     return list
 
